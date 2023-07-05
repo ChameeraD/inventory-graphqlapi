@@ -60,28 +60,6 @@ class PartCreateInput {
   @Field(() => String, {
     nullable: true,
   })
-  relatedPacket?: string | null;
-
-  @ApiProperty({
-    required: false,
-    type: String,
-  })
-  @IsString()
-  @IsOptional()
-  @Field(() => String, {
-    nullable: true,
-  })
-  relatedPacketId?: string | null;
-
-  @ApiProperty({
-    required: false,
-    type: String,
-  })
-  @IsString()
-  @IsOptional()
-  @Field(() => String, {
-    nullable: true,
-  })
   weight?: string | null;
 }
 

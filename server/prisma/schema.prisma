@@ -19,16 +19,14 @@ model User {
 }
 
 model Part {
-  color           String?
-  createdAt       DateTime @default(now())
-  description     String?
-  id              String   @id @default(auto()) @map("_id") @mongo.ObjectId
-  packet          Packet?  @relation(fields: [packetId], references: [id])
-  packetId        String?
-  relatedPacket   String?
-  relatedPacketId String?
-  updatedAt       DateTime @updatedAt
-  weight          String?
+  color       String?
+  createdAt   DateTime @default(now())
+  description String?
+  id          String   @id @default(auto()) @map("_id") @mongo.ObjectId
+  packet      Packet?  @relation(fields: [packetId], references: [id])
+  packetId    String?
+  updatedAt   DateTime @updatedAt
+  weight      String?
 }
 
 model Packet {
