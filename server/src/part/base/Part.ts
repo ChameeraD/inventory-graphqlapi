@@ -65,28 +65,6 @@ class Part {
   packet?: Packet | null;
 
   @ApiProperty({
-    required: false,
-    type: String,
-  })
-  @IsString()
-  @IsOptional()
-  @Field(() => String, {
-    nullable: true,
-  })
-  relatedPacket!: string | null;
-
-  @ApiProperty({
-    required: false,
-    type: String,
-  })
-  @IsString()
-  @IsOptional()
-  @Field(() => String, {
-    nullable: true,
-  })
-  relatedPacketId!: string | null;
-
-  @ApiProperty({
     required: true,
   })
   @IsDate()
